@@ -9,8 +9,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   });
 });
 
-
-
 // This block is new!
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
@@ -18,4 +16,5 @@ chrome.runtime.onMessage.addListener(
       chrome.tabs.create({"url": request.url});
     }
   }
+  document.create();
 );

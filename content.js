@@ -1,6 +1,13 @@
 
+// get the first element in DOM
+var firstElement = $(document).first();
 
-// content.js
+var bar = document.createElement("div");
+var 
+
+
+
+/*
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if( request.message === "clicked_browser_action" ) {
@@ -13,3 +20,4 @@ chrome.runtime.onMessage.addListener(
     }
   }
 );
+*/
