@@ -1,5 +1,4 @@
-
-(function addBar() {
+function addBar() {
 	var newDiv = document.createElement("div");
 	var newContent = document.createTextNode("1%");
 	newDiv.appendChild(newContent);
@@ -8,9 +7,9 @@
 	divP.appendChild(newDiv);
 	divP.setAttribute("id", "myProgress");
 	document.body.appendChild(divP);
-}).call(this);
+}
 
-(function move() {
+function move() {
 	var elem = document.getElementById("myBar");
 	var width = 1;
 	var id = setInterval(frame, 1000);
@@ -24,6 +23,14 @@
 			elem.innerHTML = width * 1 + "%";
 		}
 	}
-}).call(this);
+}
 
 
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    if( request.message === "clicked_browser_action" ) {
+    	addBar();
+    	move();
+    }
+  }
+);
