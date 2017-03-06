@@ -12,15 +12,24 @@ function addBar() {
 function move() {
 	var elem = document.getElementById("myBar");
 	var width = 1;
-	var id = setInterval(frame, 1000);
+	var id = setInterval(frame, 100);
 	function frame() {
 		if (width >= 100) {
 			clearInterval(id);
+			alert("Take a break!");
 		}
 		else {
 			width++;
 			elem.style.width = width + "%";
 			elem.innerHTML = width * 1 + "%";
+		}
+		// change color
+		if (width >= 80) {
+			elem.style.backgroundColor = "red";
+		}
+		else if (width >= 45) {
+			elem.style.backgroundColor = "yellow";
+			elem.style.color = "black";
 		}
 	}
 }

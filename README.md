@@ -14,7 +14,7 @@ Bugs:
 
 Advanced features:
 
-1. change color when approaching 100%
+1. ~~change color when approaching 100%~~
 2. let user set the time, width, color, position, bla, bla...
 3. alert or frozen the browser when reach 100%
 4. 
